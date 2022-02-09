@@ -54,6 +54,7 @@ public  class StandartPurchaseApplication implements PurchaseApplication{
 		}
 		return order;
 	}
+}
 
 	
 	

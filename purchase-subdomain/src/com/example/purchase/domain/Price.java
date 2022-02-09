@@ -1,7 +1,5 @@
 package com.example.purchase.domain;
 
-import com.example.purchase.domain.Price;
-
 public final class Price {
 	private final double value;
 
@@ -14,14 +12,14 @@ public final class Price {
 	}
 
 	public static Price of(double value) {
-		if (!isValid(value)) {
+		if (!isValid()) {
 			throw new IllegalArgumentException("This is not a valid price");
 		}
 		return new Price(value);
 	}
 
-	private static boolean isValid(double value) {
-		if(value <= 0) return false;
+	private static boolean isValid() {
+
 		return true;
 	}
 

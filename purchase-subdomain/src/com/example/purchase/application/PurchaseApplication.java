@@ -1,18 +1,22 @@
 package com.example.purchase.application;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.purchase.domain.ISBN;
+import com.example.purchase.domain.Order;
 
-import com.example.purchase.domain.Purchase;
-import com.example.purchase.domain.PurchaseId;
+import java.util.List;
+
+import com.example.purchase.domain.Book;
+import com.example.purchase.domain.Category;
+import com.example.purchase.domain.Price;
 
 public interface PurchaseApplication {
-	
 
-List <Purchase> ListPurchase (Purchase purchase);
-Optional<Purchase> findPurchaseByPurchaseId(PurchaseId PurchaseId);
-Purchase addPurchase(Purchase purchase, int Price);	
+	Book saleBook(Price price);
 
-	
+	List<Book> listBook(Category category);
+
+	List<Book> searchBook(ISBN isbn);
+
+	Order orderBook(Order order, int StockNumber);
 
 }

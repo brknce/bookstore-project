@@ -1,4 +1,5 @@
 package com.example.purchase.domain;
+
 import java.util.Objects;
 
 public final class ISBN {
@@ -20,7 +21,6 @@ public final class ISBN {
 	}
 
 	private static boolean isValid(String value) {
-
 		var isbn = value.toCharArray();
 		var sum = 0;
 		if (isbn.length == 10) {
